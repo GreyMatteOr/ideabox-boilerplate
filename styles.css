@@ -29,8 +29,7 @@ body {
 .idea-form>div,
 .idea-form>button {
   margin: .5em 0;
-  border-color: yellow;
-  border-style: double;
+
 }
 
 .idea-form p {
@@ -64,7 +63,10 @@ body {
   width: 100%;
   grid-column: 2;
 }
+.idea-cards{
 
+  padding:0 .9375em ;
+}
 .ideas img {
   width: 20px;
   height: auto;
@@ -96,7 +98,12 @@ text-align: center;
   background: #353567;
 }
 
-
+.purple-6 {
+  background: #6E646b; 
+}
+.white-background {
+  background: #ffffff;
+}
 /*=== Fonts ===*/
 
 .header-text {
