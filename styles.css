@@ -11,8 +11,24 @@ html, body {
 
 body {
   display: flex;
-}
 
+}
+.menu {
+  position: relative;
+
+}
+.menu img{
+  position: absolute;
+  width: 2.8125em;
+  height: auto;
+  top: 1.25em;
+  left: 1.25em;
+}
+h1{
+text-align: center;
+border-color: yellow;
+border-style: double;
+} 
 /*=== Background Colors ===*/
 
 .purple-1 {
