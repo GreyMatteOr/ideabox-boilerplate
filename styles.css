@@ -22,9 +22,23 @@ body {
 }
 
 .idea-form {
-  padding: 2em .9375em;
+  padding: 0 .9375em;
   display: flex;
   flex-direction: column;
+}
+.idea-form>div,
+.idea-form>button {
+  margin: .5em 0;
+  border-color: yellow;
+  border-style: double;
+}
+
+.idea-form p {
+  padding: .375em 0;
+}
+
+.idea-form input {
+  width: 100%;
 }
 
 .search-ideas {
@@ -100,6 +114,10 @@ text-align: center;
 
 .light-text{
   color: #e9e9f3;
+}
+
+.white-text {
+  color: #ffffff;
 }
 /*===    borders   ===*/
 
