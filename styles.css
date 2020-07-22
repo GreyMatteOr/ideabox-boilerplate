@@ -1,5 +1,5 @@
 /*=== Reset ===*/
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 html, body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
@@ -13,13 +13,15 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-style: "Open Sans" ;
+  font-weight: 300 ;
 }
 
 .hidden{
   display: none;
 }
 
-.idea-form {  
+.idea-form {
   padding: 2em .9375em;
   display: flex;
   flex-direction: column;
@@ -84,17 +86,21 @@ text-align: center;
 /*=== Fonts ===*/
 
 .header-text {
-  color: #EAEAF4;
+  color: #1F1F3D;
   font-family: 'Open Sans';
   font-weight: bold;
   padding: 20px;
 }
 
 .body-text {
-  font: 'Open Sans' light;
+  font-family:'Open Sans';
+  font-weight: 300;
+
 }
 
-
+.black-text{
+  color: #FFFFFF;
+}
 /*=== menu section ===*/
 
 .menu {
