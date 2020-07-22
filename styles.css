@@ -11,24 +11,22 @@ html, body {
 
 body {
   display: flex;
-
 }
-.menu {
-  position: relative;
 
+.hidden{
+  display: none;
 }
-.menu img{
-  position: absolute;
-  width: 2.8125em;
+
+.ideas img{
+  width: 20px;
   height: auto;
-  top: 1.25em;
-  left: 1.25em;
 }
+
 h1{
 text-align: center;
 border-color: yellow;
 border-style: double;
-} 
+}
 /*=== Background Colors ===*/
 
 .purple-1 {
@@ -67,6 +65,15 @@ border-style: double;
 .menu {
   height: 100%;
   width: 380px;
+  position: relative;
+}
+
+.menu img{
+  position: absolute;
+  width: 2.8125em;
+  height: auto;
+  top: 1.25em;
+  left: 1.25em;
 }
 
 /*=== main section ===*/
