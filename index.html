@@ -5,11 +5,23 @@
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body class="purple-1">
+    
     <section class="menu purple-4">
       <img src="./assets/menu.svg" alt="hamburger">
       <h1 class="header-text">IdeaBox</h1>
     </section>
+
+    <section class="menu hidden">
+      <div class="hamburger-top">
+        <img src="./assets/menu-close.svg" alt="menu-close">
+        <h3>IdeaBox</h3>
+      </div>
+      <p>Filter Starred Ideas</p>
+      <button>Show Starred Ideas</button>
+    </section>
+    
     <main class="ideas">
+      <div class="overlay hidden"></div>
       <section class="idea-form purple-2">
         <p>Title</p>
         <input type="text" name="" value="">
