@@ -15,6 +15,7 @@ body {
   width: 100%;
   font-style: "Open Sans";
   font-weight: 300;
+  font-size: 16px;
 }
 
 #main-title {
@@ -250,7 +251,7 @@ h3 {
 
 /*=== media queries ===*/
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
   body {
     flex-direction: column;
   }
@@ -269,4 +270,36 @@ h3 {
   .idea-form {
     flex-grow: 1;
   }
+} */
+
+@media screen and (min-width: 1200px) { 
+  .drop-down {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: grid;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .idea-form {
+    width: 100%;
+  }
+
+  .idea-cards {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 17.9375em);
+    grid-column-gap: 1.375em;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 20em 1fr;
+    grid-template-rows: 29.375em 1fr;
+    
+  }
+
 }
