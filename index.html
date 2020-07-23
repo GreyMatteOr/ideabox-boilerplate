@@ -4,15 +4,87 @@
     <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
-  <body class="purple-1">
-    <section class="menu purple-4">
-      <h1 class="header-text">IdeaBox</h1>
+  <body class="purple-1 body-text">
+
+    <section class="menu purple-4 header-text hidden">
+      <img src="./assets/menu.svg" alt="hamburger">
+      <h3 class="header-text white-text" id="main-title">IdeaBox</h3>
     </section>
-    <main class="ideas">
+
+    <section class="drop-down purple-4">
+      <div class="hamburger-top">
+        <img src="./assets/menu-close.svg" alt="menu-close">
+        <h3 class="header-text white-text">IdeaBox</h3>
+      </div>
+      <p class = "purple-grey-text">Filter Starred Ideas</p>
+      <button class="header-text white-text purple-3">Show Starred Ideas</button>
+    </section>
+
+    <main>
+      <div class="overlay hidden"></div>
       <section class="idea-form purple-2">
+        <div>
+          <p class="header-text">Title</p>
+          <input class='border-top' id="title-input"type="text" name="" value="">
+        </div>
+        <div>
+          <p class="header-text">Body</p>
+          <input class='border-top' id="body-input" type="text" name="" value="">
+        </div>
+        <button class="header-text purple-5 light-text border-top" type="button" name="button">Save</button>
+        <div class="search-ideas border-top">
+          <div class='purple-5' type="button" name="button"> <img src="./assets/search.svg" alt="">
+          </div>
+          <input class="medium-text" type="text" name="" value="" placeholder=" Search ideas">
+        </div>
       </section>
       <section class="idea-cards">
+        <div class="ideas">
+          <div class="idea-top purple-4">
+            <img src="./assets/star-active.svg" alt="star icon">
+            <img src="./assets/delete.svg" alt="delete icon">
+          </div>
+          <div class="idea-text white-background">
+            <h4 class="header-text">Idea Title</h4>
+            <p class="body-text">Idea Body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="idea-bottom purple-3">
+              <img src="./assets/comment.svg" alt="">
+              <p class="body-text">Comment</p>
+          </div>
+        </div>
+
+        <div class="ideas">
+          <div class="idea-top purple-4">
+            <img src="./assets/star-active.svg" alt="star icon">
+            <img src="./assets/delete.svg" alt="delete icon">
+          </div>
+          <div class="idea-text white-background">
+            <h4 class="header-text">Idea Title</h4>
+            <p class="body-text">Idea Body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="idea-bottom purple-3">
+              <img src="./assets/comment.svg" alt="">
+              <p class="body-text">Comment</p>
+          </div>
+        </div>
+
+        <div class="ideas">
+          <div class="idea-top purple-4">
+            <img src="./assets/star-active.svg" alt="star icon">
+            <img src="./assets/delete.svg" alt="delete icon">
+          </div>
+          <div class="idea-text white-background">
+            <h4 class="header-text">Idea Title</h4>
+            <p class="body-text">Idea Body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</p>
+          </div>
+          <div class="idea-bottom purple-3">
+              <img src="./assets/comment.svg" alt="">
+              <p class="body-text">Comment</p>
+          </div>
+        </div>
       </section>
     </main>
   </body>
+  <script src="./src/main.js"></script>
 </html>
