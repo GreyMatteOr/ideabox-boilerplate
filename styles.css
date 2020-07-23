@@ -17,10 +17,6 @@ body {
   font-weight: 300;
 }
 
-.hidden{
-  display: none;
-}
-
 #main-title {
   padding: .6em;
 }
@@ -222,7 +218,7 @@ h3 {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 1.2em;
-   
+
 
 }
 .drop-down p,
@@ -245,6 +241,11 @@ h3 {
 
 .idea-cards {
   flex-grow: 3;
+}
+
+
+.hidden{
+  display: none;
 }
 
 /*=== media queries ===*/
