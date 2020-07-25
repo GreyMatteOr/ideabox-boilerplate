@@ -10,15 +10,29 @@ var divOverlay = document.querySelector('.overlay');
 buttonSave.addEventListener('click', insertIdea)
 imgHamburgerIcon[0].addEventListener('click', toggleDropDown);
 imgHamburgerIcon[1].addEventListener('click', toggleDropDown);
+inputTitle.addEventListener('keyup', checkButtonStatus);
+inputBody.addEventListener('keyup', checkButtonStatus);
 
+window.onload = checkButtonStatus;
 
 ;function insertIdea() {
   var newTitle = inputTitle.value;
   var newBody = inputBody.value;
   if( newTitle !== '' && newBody !== '' ) {
+    inputTitle.value = '';
+    inputBody.value = '';
     ideaCards.innerHTML += new Idea(newTitle, newBody).createHtml();
+    checkButtonStatus();
   };
 };
+
+;function checkButtonStatus() {
+  if (inputTitle.value === '' || inputBody.value === '') {
+    buttonSave.disabled = true;
+  } else {
+    buttonSave.disabled = false;
+  }
+}
 
 ;function toggleDropDown() {
   sectionDefaultMenu.classList.toggle('hidden');

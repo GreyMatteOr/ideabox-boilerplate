@@ -37,6 +37,11 @@ body {
   height: 2.5em;
 }
 
+.idea-form>button:disabled {
+  background-color: #5858a7;
+  cursor: not-allowed;
+}
+
 .idea-form p {
   padding: .375em 0;
 }
