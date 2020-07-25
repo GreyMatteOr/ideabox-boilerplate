@@ -4,8 +4,10 @@ class Idea  {
     this.title = title;
     this.body = body;
     this.star = false;
+    this.node;
 
   };
+
   saveToStorage(){
 
 
@@ -24,11 +26,12 @@ class Idea  {
   createHtml(){
     var starIcon
     if(this.star){
+      
       starIcon = "./assets/star-active.svg"
     } else {
       starIcon = "./assets/star.svg"
-    }
-    return `<div class="ideas">
+    }  
+    return `<div id = "${this.id}" class="ideas">
       <div class="idea-top purple-4">
         <img src="${starIcon}" alt="star icon">
         <img src="./assets/delete.svg" alt="delete icon">

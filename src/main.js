@@ -1,3 +1,5 @@
+var ideaArray = [];
+
 var buttonSave = document.querySelector('#save-button');
 var ideaCards = document.querySelector('.idea-cards');
 var inputTitle = document.querySelector('#title-input');
@@ -18,11 +20,14 @@ window.onload = checkButtonStatus;
 ;function insertIdea() {
   var newTitle = inputTitle.value;
   var newBody = inputBody.value;
-  if( newTitle !== '' && newBody !== '' ) {
+  if(newTitle !== '' && newBody !== '') {
     inputTitle.value = '';
     inputBody.value = '';
-    ideaCards.innerHTML += new Idea(newTitle, newBody).createHtml();
+    var idea = new Idea(newTitle, newBody);
+    ideaCards.innerHTML += idea.createHtml();
+    ideaArray.push(idea);
     checkButtonStatus();
+    idea.node = document.querySelector(`#${idea.id}`);
   };
 };
 
