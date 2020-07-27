@@ -74,10 +74,9 @@ function createIdea(newTitle, newBody){
 
 ;function starIdea(event) {
   var ideaNode = event.target.closest('.ideas');
-  var index = ideaNode.dataset.index;
-  var idea = ideaArray[index];
+  var idea = ideaArray[findIndex(ideaNode)];
   idea.star = !idea.star;
-  idea.updateIdea();
+  idea.updateIdea(ideaNode);
 };
 
 var idea = new Idea ("example", "bret")
