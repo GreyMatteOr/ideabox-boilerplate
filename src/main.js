@@ -16,7 +16,24 @@ inputTitle.addEventListener('keyup', checkButtonStatus);
 inputBody.addEventListener('keyup', checkButtonStatus);
 ideaCards.addEventListener('click', checkClick);
 
-window.onload = checkButtonStatus;
+window.onload = doOnLoad;
+
+function doOnLoad(){
+  ideaArray = localStorage.getItem('ideaArray')
+  ideaArray = json.parse(ideaArray);
+  for (var i = 0; i < ideaArray.length; i++){
+    ideaArray[i] = new Idea(ideaArray[i].title, ideaArray[i].body, ideaArray[i].star)
+  }
+  checkButtonStatus();
+  displayIdeas();
+}
+
+function displayIdeas(){
+  ideaCards.innerHTML = '';
+  for (var i = 0; i < ideaArray.length; i++){
+    ideaCards.innerHTML += ideaArray[i].createHtml();
+  }
+}
 
 ;function getUserIdea() {
   var newTitle = inputTitle.value;
