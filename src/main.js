@@ -54,14 +54,17 @@ function createIdea(newTitle, newBody){
 ;function checkClick(event) {
   if (event.target.dataset.type === "delete") {
     deleteIdea(event);
-  } 
+  }
   if (event.target.dataset.type === "star") {
     starIdea(event);
   }
 };
 
 ;function deleteIdea(event) {
-  
+  var ideaNode = event.target.closest('.ideas');
+  var index = ideaNode.dataset.index;
+  ideaNode.parentNode.removeChild(ideaNode);
+  ideaArray.splice(index, 1);
 }
 
 ;function starIdea(event) {
