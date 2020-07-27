@@ -7,6 +7,7 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -18,6 +19,12 @@ body {
   font-size: 16px;
 }
 
+main{
+  position: absolute;
+  top: 65px;
+  width: 100%;
+}
+
 #main-title {
   padding: .6em;
 }
@@ -27,10 +34,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .idea-form>div,
 .idea-form>button {
   margin: .5em 0;
-
 }
 
 .idea-form>button {
@@ -78,16 +85,14 @@ body {
   left: .55em;
   width: 1.4em;
   height: auto;
-
 }
 
 .search-ideas input {
   height: auto;
   width: auto;
   grid-column: 2;
-
-
 }
+
 .idea-cards{
   padding:0 .9375em ;
 }
@@ -127,6 +132,7 @@ body {
 h3 {
   text-align: center;
 }
+
 .overlay{
   width: 100%;
   height: 100%;
@@ -160,10 +166,12 @@ h3 {
 .purple-6 {
   background: #6E646b;
 }
+
 .purple-grey-text{
   color: #bfbfdd;
   font-weight: 600;
 }
+
 .white-background {
   background: #ffffff;
 }
@@ -208,8 +216,8 @@ h3 {
   width: 100%;
   position: relative;
 }
-.drop-down img,
 
+.drop-down img,
 .menu img{
   position: absolute;
   width: 2.8125em;
@@ -217,22 +225,23 @@ h3 {
   top: .6em;
   left: .5em;
 }
+
 .drop-down{
+  position: relative;
   padding-top: .875em;
   padding-bottom: .875em;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 1.2em;
-
-
+  z-index: 11;
 }
+
 .drop-down p,
 .drop-down button{
   margin:0 .9375rem;
-
-
 }
+
 /*=== main section ===*/
 
 .ideas {
@@ -249,59 +258,53 @@ h3 {
   flex-grow: 3;
 }
 
-
 .hidden{
   display: none;
 }
+
 .horse-rule{
   display: none;
 }
 /*=== media queries ===*/
 
-/* @media only screen and (max-width: 400px) {
-  body {
-    flex-direction: column;
-  }
-
-  .header-text {
-    font-size: 18px;
-    padding: 10px;
-  }
-
-  .menu {
-    height: 40px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .idea-form {
-    flex-grow: 1;
-  }
-} */
-
 @media screen and (min-width: 900px)  {
+
+  body {
+    display: grid;
+    grid-template-columns: 20em 1fr;
+  }
+
   .drop-down {
     grid-column: 1;
     grid-row: 1 / span 2;
     display: flex ;
     flex-direction: column;
     align-content: flex-start;
-    /* text-align: left; */
-    /* justify-content: center; */
+    height: 100%;
   }
+
+  main {
+    position: static;
+    top: 0;
+    height: 100%;
+  }
+
   .horse-rule{
     display: block;
     width: 100%;
     opacity: 30%;
   }
+
   .drop-down h3{
     margin: 0;
     padding: 0 1.2rem;
     text-align: left;
   }
+
   .overlay{
     display: none;
   }
+
   .drop-down>p,
   .drop-down>button{
     margin: 1.2rem;
@@ -327,26 +330,19 @@ h3 {
     grid-template-columns: repeat(auto-fill, 17.9375em);
     grid-column-gap: 1.375em;
   }
-
-  body {
-    display: grid;
-    grid-template-columns: 20em 1fr;
-    grid-template-rows: 29.375em 1fr;
-
-  }
-
 }
+
 @media screen and (min-width: 1550px){
+
   body{
     font-size: 24px;
-
   }
+
   .header-text{
     font-size: 24px;
-
   }
+
   .body-text{
     font-size: 20px;
   }
-
 }
