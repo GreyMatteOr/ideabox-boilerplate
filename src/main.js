@@ -9,7 +9,7 @@ var sectionDefaultMenu = document.querySelector('.menu');
 var sectionDropDownMenu = document.querySelector('.drop-down');
 var divOverlay = document.querySelector('.overlay');
 
-buttonSave.addEventListener('click', insertIdea)
+buttonSave.addEventListener('click', getUserIdea)
 imgHamburgerIcon[0].addEventListener('click', toggleDropDown);
 imgHamburgerIcon[1].addEventListener('click', toggleDropDown);
 inputTitle.addEventListener('keyup', checkButtonStatus);
@@ -17,20 +17,25 @@ inputBody.addEventListener('keyup', checkButtonStatus);
 
 window.onload = checkButtonStatus;
 
-;function insertIdea() {
+;function getUserIdea() {
   var newTitle = inputTitle.value;
   var newBody = inputBody.value;
   if(newTitle !== '' && newBody !== '') {
     inputTitle.value = '';
     inputBody.value = '';
-    var idea = new Idea(newTitle, newBody);
-    ideaCards.innerHTML += idea.createHtml();
-    ideaArray.push(idea);
     checkButtonStatus();
-    idea.node = document.querySelector(`#${idea.id}`);
+    createIdea(newTitle, newBody);
   };
 };
 
+function createIdea(newTitle, newBody){
+  var idea = new Idea(newTitle, newBody);
+  ideaCards.innerHTML += idea.createHtml(ideaArray.length);
+  ideaArray.push(idea);
+  var ideasGrid = document.querySelectorAll('.ideas');
+  idea.node = ideasGrid[ideasGrid.length - 1];
+
+}
 ;function checkButtonStatus() {
   if (inputTitle.value === '' || inputBody.value === '') {
     buttonSave.disabled = true;

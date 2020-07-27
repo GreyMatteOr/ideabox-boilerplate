@@ -5,33 +5,25 @@ class Idea  {
     this.body = body;
     this.star = false;
     this.node;
-
   };
-
   saveToStorage(){
-
-
   }
   deleteFromStorage(){
-
-
   }
   updateIdea(title, body, star){
     this.title = title;
     this.body = body;
     this.star = star;
-
-
   }
-  createHtml(){
+  createHtml(indexInArray){
     var starIcon
     if(this.star){
-      
+
       starIcon = "./assets/star-active.svg"
     } else {
       starIcon = "./assets/star.svg"
-    }  
-    return `<div id = "${this.id}" class="ideas">
+    }
+    return `<div class="ideas" data-index="${indexInArray}">
       <div class="idea-top purple-4">
         <img src="${starIcon}" alt="star icon">
         <img src="./assets/delete.svg" alt="delete icon">
@@ -45,7 +37,6 @@ class Idea  {
           <p class="body-text">Comment</p>
       </div>
     </div>`
-
   }
 }
 // module.exports = Idea
