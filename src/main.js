@@ -34,7 +34,6 @@ function createIdea(newTitle, newBody){
   ideaCards.innerHTML += idea.createHtml(ideaArray.length);
   ideaArray.push(idea);
   var ideasGrid = document.querySelectorAll('.ideas');
-  idea.node = ideasGrid[ideasGrid.length - 1];
 }
 
 ;function checkButtonStatus() {
@@ -62,13 +61,23 @@ function createIdea(newTitle, newBody){
 
 ;function deleteIdea(event) {
   var ideaNode = event.target.closest('.ideas');
-  var index = ideaNode.dataset.index;
+  ideaArray.splice(findIndex(ideaNode), 1);
   ideaNode.parentNode.removeChild(ideaNode);
-  ideaArray.splice(index, 1);
+  console.log('Succes!')
+}
+
+;function findIndex(ideaNode){
+  var nodeList = document.querySelectorAll('.ideas');
+  nodeList = Array.from(nodeList);
+  return nodeList.indexOf(ideaNode);
 }
 
 ;function starIdea(event) {
-
-}
+  var ideaNode = event.target.closest('.ideas');
+  var index = ideaNode.dataset.index;
+  var idea = ideaArray[index];
+  idea.star = !idea.star;
+  idea.updateIdea();
+};
 
 var idea = new Idea ("example", "bret")

@@ -4,28 +4,23 @@ class Idea  {
     this.title = title;
     this.body = body;
     this.star = false;
-    this.node;
   };
+
   saveToStorage(){
   }
+
   deleteFromStorage(){
   }
-  updateIdea(title, body, star){
-    this.title = title;
-    this.body = body;
-    this.star = star;
-  }
-  createHtml(indexInArray){
-    var starIcon
-    if(this.star){
 
-      starIcon = "./assets/star-active.svg"
-    } else {
-      starIcon = "./assets/star.svg"
-    }
-    return `<div class="ideas" data-index="${indexInArray}">
+  updateIdea(node){
+    node.children[0].children[0].src = this.getCorrectStar();
+  }
+
+  createHtml(indexInArray){
+    return `
+    <div class="ideas">
       <div class="idea-top purple-4">
-        <img data-type="star" src="${starIcon}" alt="star icon">
+        <img data-type="star" src="${this.getCorrectStar()}" alt="star icon">
         <img data-type="delete" src="./assets/delete.svg" alt="delete icon">
       </div>
       <div class="idea-text white-background">
@@ -37,6 +32,10 @@ class Idea  {
           <p class="body-text">Comment</p>
       </div>
     </div>`
+  }
+
+  getCorrectStar() {
+    return (this.star) ? "./assets/star-active.svg" : "./assets/star.svg";
   }
 }
 // module.exports = Idea
