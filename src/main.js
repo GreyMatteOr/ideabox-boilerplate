@@ -14,6 +14,7 @@ imgHamburgerIcon[0].addEventListener('click', toggleDropDown);
 imgHamburgerIcon[1].addEventListener('click', toggleDropDown);
 inputTitle.addEventListener('keyup', checkButtonStatus);
 inputBody.addEventListener('keyup', checkButtonStatus);
+ideaCards.addEventListener('click', checkClick);
 
 window.onload = checkButtonStatus;
 
@@ -34,8 +35,8 @@ function createIdea(newTitle, newBody){
   ideaArray.push(idea);
   var ideasGrid = document.querySelectorAll('.ideas');
   idea.node = ideasGrid[ideasGrid.length - 1];
-
 }
+
 ;function checkButtonStatus() {
   if (inputTitle.value === '' || inputBody.value === '') {
     buttonSave.disabled = true;
@@ -49,5 +50,22 @@ function createIdea(newTitle, newBody){
   sectionDropDownMenu.classList.toggle('hidden');
   divOverlay.classList.toggle('hidden');
 };
+
+;function checkClick(event) {
+  if (event.target.dataset.type === "delete") {
+    deleteIdea(event);
+  } 
+  if (event.target.dataset.type === "star") {
+    starIdea(event);
+  }
+};
+
+;function deleteIdea(event) {
+  
+}
+
+;function starIdea(event) {
+
+}
 
 var idea = new Idea ("example", "bret")

@@ -25,8 +25,8 @@ class Idea  {
     }
     return `<div class="ideas" data-index="${indexInArray}">
       <div class="idea-top purple-4">
-        <img src="${starIcon}" alt="star icon">
-        <img src="./assets/delete.svg" alt="delete icon">
+        <img data-type="star" src="${starIcon}" alt="star icon">
+        <img data-type="delete" src="./assets/delete.svg" alt="delete icon">
       </div>
       <div class="idea-text white-background">
         <h4 class="header-text">${this.title}</h4>
