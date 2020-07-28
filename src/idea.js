@@ -1,21 +1,21 @@
 class Idea  {
-  constructor(title, body, star){
-    this.id = Date.now()
+  constructor(title, body, star, id){
     this.title = title;
     this.body = body;
     this.star = star || false;
+    this.id = id || Date.now();
   };
-
+​
   saveToStorage(){
   }
-
+​
   deleteFromStorage(){
   }
-
+​
   updateIdea(node){
     node.children[0].children[0].src = this.getCorrectStar();
   }
-
+​
   createHtml(indexInArray){
     return `
     <div class="ideas">
@@ -33,7 +33,7 @@ class Idea  {
       </div>
     </div>`
   }
-
+​
   getCorrectStar() {
     return (this.star) ? "./assets/star-active.svg" : "./assets/star.svg";
   }
