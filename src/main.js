@@ -1,6 +1,6 @@
 var ideaArray;
-var showAll = true;
-var searchDisplay = false;
+var showStarred = false;
+var showSearched = false;
 
 var buttonSave = document.querySelector('#save-button');
 var buttonShowStar = document.querySelector('#show-star');
@@ -15,9 +15,9 @@ var inputSearch = document.querySelector("#search-input");
 var buttonSearch = document.querySelector('#search-button')
 
 buttonSave.addEventListener('click', getUserIdea)
-buttonShowStar.addEventListener('click', function showOnlyStars(){
-  showAll = !showAll;
-  displayIdeas(showAll);
+buttonShowStar.addEventListener('click', function showOnlyStars() {
+  showStarred = !showStarred;
+  displayIdeas();
   toggleDropDown();
 })
 imgHamburgerIcon[0].addEventListener('click', toggleDropDown);
@@ -26,21 +26,21 @@ inputTitle.addEventListener('keyup', checkButtonStatus);
 inputBody.addEventListener('keyup', checkButtonStatus);
 ideaCards.addEventListener('click', checkClick);
 buttonSearch.addEventListener('click', toggleSearch);
-inputSearch.addEventListener('keyup', function updateDisplay(){
-  displayIdeas(showAll);
+inputSearch.addEventListener('keyup', function updateDisplay() {
+  displayIdeas();
 });
 window.onload = doOnLoad;
 
-function toggleSearch(){
-  searchDisplay = !searchDisplay;
-  displayIdeas(showAll); 
+;function toggleSearch() {
+  showSearched = !showSearched;
+  displayIdeas();
 }
 
-function doOnLoad(){
+;function doOnLoad() {
   ideaArray = localStorage.getItem('ideaArray')
   ideaArray = JSON.parse(ideaArray);
-  if(ideaArray){
-    for (var i = 0; i < ideaArray.length; i++){
+  if(ideaArray) {
+    for (var i = 0; i < ideaArray.length; i++) {
       ideaArray[i] = new Idea(ideaArray[i].title, ideaArray[i].body, ideaArray[i].star, ideaArray[i].id)
     }
   } else {
@@ -50,19 +50,19 @@ function doOnLoad(){
   displayIdeas(true);
 }
 
-function displayIdeas(displayAll){
+;function displayIdeas() {
   var toDisplay = [];
-  if (displayAll){
+  if (!showStarred) {
     toDisplay = ideaArray.concat();
   } else {
-    for (var i = 0; i < ideaArray.length; i++){
-      if(ideaArray[i].star){
+    for (var i = 0; i < ideaArray.length; i++) {
+      if(ideaArray[i].star) {
         toDisplay.push(ideaArray[i])
       }
     }
-  } if(searchDisplay){
-    for (var i = 0; i < toDisplay.length; i++){
-      if(!(toDisplay[i].title.includes(inputSearch.value) || toDisplay[i].body.includes(inputSearch.value))){
+  } if(showSearched) {
+    for (var i = 0; i < toDisplay.length; i++) {
+      if(!(toDisplay[i].title.includes(inputSearch.value) || toDisplay[i].body.includes(inputSearch.value))) {
         toDisplay.splice(i, 1);
         i--;
       }
@@ -70,7 +70,7 @@ function displayIdeas(displayAll){
 
   }
   ideaCards.innerHTML = '';
-  for (var i = 0; i < toDisplay.length; i++){
+  for (var i = 0; i < toDisplay.length; i++) {
       ideaCards.innerHTML += toDisplay[i].createHtml();
   }
 }
@@ -86,7 +86,7 @@ function displayIdeas(displayAll){
   };
 };
 
-;function createIdea(newTitle, newBody){
+;function createIdea(newTitle, newBody) {
   var idea = new Idea(newTitle, newBody);
   ideaCards.innerHTML += idea.createHtml(ideaArray.length);
   ideaArray.push(idea);
@@ -123,7 +123,7 @@ function displayIdeas(displayAll){
   localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
 }
 
-;function findIndex(ideaNode){
+;function findIndex(ideaNode) {
   for (var i=0; i < ideaArray.length; i++) {
     if (ideaArray[i].id === +ideaNode.dataset.id) {
       return i;
@@ -138,8 +138,8 @@ function displayIdeas(displayAll){
   idea.star = !idea.star;
   idea.updateIdea(ideaNode);
   localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
-  if(!showAll){
-    displayIdeas(showAll)
+  if(showStarred) {
+    displayIdeas()
   }
 };
 
