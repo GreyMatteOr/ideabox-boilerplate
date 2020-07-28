@@ -1,5 +1,6 @@
 var ideaArray;
 var showAll = true;
+var searchDisplay = false;
 
 var buttonSave = document.querySelector('#save-button');
 var buttonShowStar = document.querySelector('#show-star');
@@ -10,6 +11,8 @@ var inputBody = document.querySelector('#body-input');
 var imgHamburgerIcon = document.querySelectorAll('.drop-down-toggle');
 var sectionDefaultMenu = document.querySelector('.menu');
 var sectionDropDownMenu = document.querySelector('.drop-down');
+var inputSearch = document.querySelector("#search-input");
+var buttonSearch = document.querySelector('#search-button')
 
 buttonSave.addEventListener('click', getUserIdea)
 buttonShowStar.addEventListener('click', function showOnlyStars(){
@@ -22,8 +25,16 @@ imgHamburgerIcon[1].addEventListener('click', toggleDropDown);
 inputTitle.addEventListener('keyup', checkButtonStatus);
 inputBody.addEventListener('keyup', checkButtonStatus);
 ideaCards.addEventListener('click', checkClick);
-
+buttonSearch.addEventListener('click', toggleSearch);
+inputSearch.addEventListener('keyup', function updateDisplay(){
+  displayIdeas(showAll);
+});
 window.onload = doOnLoad;
+
+function toggleSearch(){
+  searchDisplay = !searchDisplay;
+  displayIdeas(showAll); 
+}
 
 function doOnLoad(){
   ideaArray = localStorage.getItem('ideaArray')
@@ -42,13 +53,21 @@ function doOnLoad(){
 function displayIdeas(displayAll){
   var toDisplay = [];
   if (displayAll){
-    toDisplay = ideaArray;
+    toDisplay = ideaArray.concat();
   } else {
     for (var i = 0; i < ideaArray.length; i++){
       if(ideaArray[i].star){
         toDisplay.push(ideaArray[i])
       }
     }
+  } if(searchDisplay){
+    for (var i = 0; i < toDisplay.length; i++){
+      if(!(toDisplay[i].title.includes(inputSearch.value) || toDisplay[i].body.includes(inputSearch.value))){
+        toDisplay.splice(i, 1);
+        i--;
+      }
+    }
+
   }
   ideaCards.innerHTML = '';
   for (var i = 0; i < toDisplay.length; i++){
