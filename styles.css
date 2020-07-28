@@ -265,6 +265,14 @@ h3 {
 .horse-rule{
   display: none;
 }
+
+.active{
+  background-color: darkgoldenrod;
+}
+
+.active-starring{
+  background-color: #a63212;
+}
 /*=== media queries ===*/
 
 @media screen and (min-width: 900px)  {
