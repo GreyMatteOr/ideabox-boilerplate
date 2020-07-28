@@ -17,6 +17,7 @@ var buttonSearch = document.querySelector('#search-button')
 buttonSave.addEventListener('click', getUserIdea)
 buttonShowStar.addEventListener('click', function showOnlyStars() {
   showStarred = !showStarred;
+  buttonShowStar.classList.toggle('active-starring')
   displayIdeas();
   toggleDropDown();
 })
@@ -33,6 +34,7 @@ window.onload = doOnLoad;
 
 ;function toggleSearch() {
   showSearched = !showSearched;
+  buttonSearch.classList.toggle('active')
   displayIdeas();
 }
 
