@@ -18,7 +18,7 @@ class Idea  {
 
   createHtml(indexInArray){
     return `
-    <div class="ideas">
+    <div class="ideas" data-id="${this.id}">
       <div class="idea-top purple-4">
         <img data-type="star" src="${this.getCorrectStar()}" alt="star icon">
         <img data-type="delete" src="./assets/delete.svg" alt="delete icon">

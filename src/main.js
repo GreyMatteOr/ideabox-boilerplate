@@ -67,7 +67,7 @@ function displayIdeas(displayAll){
   };
 };
 
-function createIdea(newTitle, newBody){
+;function createIdea(newTitle, newBody){
   var idea = new Idea(newTitle, newBody);
   ideaCards.innerHTML += idea.createHtml(ideaArray.length);
   ideaArray.push(idea);
@@ -98,18 +98,19 @@ function createIdea(newTitle, newBody){
 };
 
 ;function deleteIdea(event) {
-  if (displayAll) {
-    var ideaNode = event.target.closest('.ideas');
-    ideaArray.splice(findIndex(ideaNode), 1);
-    ideaNode.parentNode.removeChild(ideaNode);
-    localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
-  }
+  var ideaNode = event.target.closest('.ideas');
+  ideaArray.splice(findIndex(ideaNode), 1);
+  ideaNode.parentNode.removeChild(ideaNode);
+  localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
 }
 
 ;function findIndex(ideaNode){
-  var nodeList = document.querySelectorAll('.ideas');
-  nodeList = Array.from(nodeList);
-  return nodeList.indexOf(ideaNode);
+  for (var i=0; i < ideaArray.length; i++) {
+    if (ideaArray[i].id === +ideaNode.dataset.id) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 ;function starIdea(event) {
