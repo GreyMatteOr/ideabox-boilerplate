@@ -154,6 +154,7 @@ These ideas will persist through user sessions.
 +  We had some git conflicts that took some time to sort out. 
 We also learned not to copy and paste code directly from our slack messages into our editors. Downloading the plain text would have saved a couple of headaches.
  
++  When we shrink down the page, right before it completeley breaks into mobile view there is a little 'Spot' where the screen comes into contact with our Idea boxes on the right side. We were unable to get the problem solved.
 > [Back to the top](#idea-organizer)
 ---
  ## Wins
@@ -161,6 +162,8 @@ We also learned not to copy and paste code directly from our slack messages into
   + At first, iteration 0 and 1 took a lot of effort and eye-balling to put together. This took more time than we had anticipated We knew we were going to be working under time-constraints and a lot of material we had yet to cover was up ahead. Still, each time we got together, we blasted through a whole iteration in usually 3 hours or less. Even with all of the outside challenges, we came together and got to where we wanted to be with a decent chunk of leftover time. Even some never-before-seen git errors couldn't slow us down for very long!
 
   + We all are much more comfortable with gridding and formatting a page in CSS. We also have a better understanding of managing the data model along-side of the DOM.
- 
+
+  + We (especially I (danny)) started to really be able to grasp the code towards the end. I feel like this project really allowed me to better connect my html and css, but more importanly which was my end goal in this, I was able to little by little get more comfortable with my javascript. 
+  
 > [Back to the top](#idea-organizer)
  ---
