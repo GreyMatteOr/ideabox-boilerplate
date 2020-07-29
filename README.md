@@ -83,7 +83,7 @@ Clicking the overlay also hides the menu and overlay.
 
 At around 900 pixels, the website snaps in to a desktop view. It has the menu laid out statically on the left, and then the idea creation form and displayed ideas stacked on the right.
 
-<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg" alt="comp desktop" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88851407-94867100-d1a1-11ea-91ed-3130a9d23612.png" alt="attempt desktop" width="400"/>
+<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg" alt="comp desktop" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88855907-7112f480-d1a8-11ea-939e-53903c3cc9c3.png" alt="attempt desktop" width="400"/>
 
 Around 1550 pixels, it also enlargens to be easily readable on larger screens.
 
@@ -93,11 +93,11 @@ Around 1550 pixels, it also enlargens to be easily readable on larger screens.
 
 On landing, the page will have no text in either entry field and the save button will be disabled.
 
-<img src="https://user-images.githubusercontent.com/65369751/88851311-73258500-d1a1-11ea-9d97-f38d348b55ca.png" alt="attempt desktop"/>
+<img src="https://user-images.githubusercontent.com/65369751/88851311-73258500-d1a1-11ea-9d97-f38d348b55ca.png" alt="create idea1"/>
 
 To create an idea, the user must have some entry in both the title and body input field. Once they both have text, the button to save the idea will become active.
 
-<img src="https://user-images.githubusercontent.com/65369751/88851320-7751a280-d1a1-11ea-8bf3-7b5c2693bf09.png" alt="attempt desktop".>
+<img src="https://user-images.githubusercontent.com/65369751/88851320-7751a280-d1a1-11ea-8bf3-7b5c2693bf09.png" alt="create idea2".>
 
 Clicking the button will
 
@@ -109,7 +109,7 @@ Clicking the button will
 
 The webpage will look something like this afterwards
 
-<img src="./https://user-images.githubusercontent.com/65369751/88851347-80427400-d1a1-11ea-9495-6f4f88745115.png" alt="attempt desktop"/>
+<img src="https://user-images.githubusercontent.com/65369751/88851347-80427400-d1a1-11ea-9495-6f4f88745115.png" alt="create idea3"/>
 
 These ideas will persist through user sessions.
 
