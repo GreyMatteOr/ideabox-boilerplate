@@ -93,11 +93,11 @@ Around 1550 pixels, it also enlargens to be easily readable on larger screens.
 
 On landing, the page will have no text in either entry field and the save button will be disabled.
 
-<img src="https://user-images.githubusercontent.com/65369751/88851311-73258500-d1a1-11ea-9d97-f38d348b55ca.png" alt="create idea1"/>
+<img src="https://user-images.githubusercontent.com/65369751/88851311-73258500-d1a1-11ea-9d97-f38d348b55ca.png" alt="create idea1" width="400"/>
 
 To create an idea, the user must have some entry in both the title and body input field. Once they both have text, the button to save the idea will become active.
 
-<img src="https://user-images.githubusercontent.com/65369751/88851320-7751a280-d1a1-11ea-8bf3-7b5c2693bf09.png" alt="create idea2".>
+<img src="https://user-images.githubusercontent.com/65369751/88851320-7751a280-d1a1-11ea-8bf3-7b5c2693bf09.png" alt="create idea2" width="400"/>
 
 Clicking the button will
 
@@ -109,7 +109,7 @@ Clicking the button will
 
 The webpage will look something like this afterwards
 
-<img src="https://user-images.githubusercontent.com/65369751/88851347-80427400-d1a1-11ea-9495-6f4f88745115.png" alt="create idea3"/>
+<img src="https://user-images.githubusercontent.com/65369751/88851347-80427400-d1a1-11ea-9495-6f4f88745115.png" alt="create idea3" width="400"/>
 
 These ideas will persist through user sessions.
 
@@ -136,11 +136,13 @@ These ideas will persist through user sessions.
 ## Display only Favorited Ideas
 
 + Our display only favorited items section works, pretty smoothly. We created a function that allows us to store all of a users favorited items in one space. When the page re-loads the user isn’t confronted with the issue of all their favorited ideas being removed. It’s pretty easy for the user to hop back between the starred ideas and back to all of the ideas together. While inside of the starred idea section, if the user decides that they no longer want an idea inside, then they can un-favorite the idea and it will be removed the moment the button is clicked.
+
 <img src="https://user-images.githubusercontent.com/63177811/88853082-6fe3c680-d1ac-11ea-91fa-24d3d05f16ed.png" alt="ideas" width="400"/><img src="https://user-images.githubusercontent.com/63177811/88853098-76723e00-d1ac-11ea-98b4-d39f2c3a0361.png" alt="miss-fav" width="400"/>
 > [Back to Features](#features)
 
 ## Search Ideas
 + Our search ideas portion of our application allows the user to look up all of the saved ideas. To start, click the button, and it’ll remain active while the search is being performed. Only the text matching either the title or the body will pop up. All others will no longer show until the search button is turned back off, or if the character fields input matches whatever is in that specific idea card. Do be warned as of right now the search box is case-sensitive.
+
 <img src="https://user-images.githubusercontent.com/63177811/88853129-81c56980-d1ac-11ea-9e44-8edaa6666144.png" alt="srch-body" width="400"/><img src="https://user-images.githubusercontent.com/63177811/88853115-7d994c00-d1ac-11ea-8e38-91b6fa8abc87.png" alt="Specific-title" width="400"/>
 > [Back to Features](#features)
 
