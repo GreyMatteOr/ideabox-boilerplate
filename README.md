@@ -117,8 +117,20 @@ These ideas will persist through user sessions.
 ## Favorite an Idea
 > [Back to Features](#features)
 
+To favorite an idea, click the gray star in the top left corner of an idea card. The star will then turn red, indicating that the idea has been favorited. This change will carry over even if you reload the page.
+
+
+
+This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
+
 ## Delete an Idea
 > [Back to Features](#features)
+
+To delete an idea, click the X in the top right corner of an idea card. This will permanently delete your idea. This change will carry over even if you reload the page.
+
+
+
+This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
 
 ## Display only Favorited Ideas
 > [Back to Features](#features)
@@ -131,12 +143,16 @@ These ideas will persist through user sessions.
  
  +  As relative novices both in working in a group as well as CSS, getting the initial comp was challenging. There was a bug getting our overlay to size properly that took about 2-3 hours to discover what was causing it. To a lesser extent, there were numerous other sizing issues that weren't immediately obvious. Several times, we experimented with flexbox and grid-template-areas, but each time, they became overly-complicated, so we reverted back to grid. We did this enough times that it was a noticeable time-sink. The struggle did eventually unearth gems of knowledge, so in a way we're all glad to happened. Though, those lessons would have been equally memorable with half the effort.
  
++  We had some git conflicts that took some time to sort out. 
+We also learned not to copy and paste code directly from our slack messages into our editors. Downloading the plain text would have saved a couple of headaches.
+ 
 > [Back to the top](#idea-organizer)
 ---
  ## Wins
  
-  + 
-At first, iteration 0 and 1 took a lot of effort and eye-balling to put together. This took more time than we had anticipated We knew we were going to be working under time-constraints and a lot of material we had yet to cover was up ahead. Still, each time we got together, we blasted through a whole iteration in usually 3 hours or less. Even with all of the outside challenges, we came together and got to where we wanted to be with a decent chunk of leftover time. Even some never-before-seen git errors couldn't slow us down for very long!
+  + At first, iteration 0 and 1 took a lot of effort and eye-balling to put together. This took more time than we had anticipated We knew we were going to be working under time-constraints and a lot of material we had yet to cover was up ahead. Still, each time we got together, we blasted through a whole iteration in usually 3 hours or less. Even with all of the outside challenges, we came together and got to where we wanted to be with a decent chunk of leftover time. Even some never-before-seen git errors couldn't slow us down for very long!
+
+  + We all are much more comfortable with gridding and formatting a page in CSS. We also have a better understanding of managing the data model along-side of the DOM.
  
 > [Back to the top](#idea-organizer)
  ---
