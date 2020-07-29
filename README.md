@@ -61,6 +61,7 @@ Some personal goals that we also wanted to include:
 
 > [Back to the top](#idea-organizer)
 ---
+
 ## Mobile View
 
 For our websites base responsiveness, we wanted to cater to the 2 primary screen-sizes: desktop and mobile.
@@ -68,11 +69,11 @@ For our websites base responsiveness, we wanted to cater to the 2 primary screen
 We decided to design our mobile view first, and build off from there. We were given a comp (pictured below on the left) which we were to recreate (pictured right).
 
 
-<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile.jpg" alt="comp mobile" width="400"/><img src="./assets/mobile-view.png" alt="attempt mobile" width="400"/>
+<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile.jpg" alt="comp mobile" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88851388-8df7f980-d1a1-11ea-8aab-f4c8d935f844.png" alt="attempt mobile" width="400"/>
 
 Notice it is mostly vertically organized, and to conserve space, we implemented a drop-down menu. An overlay dims everything and renders everything unusable.
 
-<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg" alt="comp mobile with dropdown" width="400"/><img src="./assets/mobile-dropdown.png" alt="attempt mobile with dropdown" width="400"/>
+<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg" alt="comp mobile with dropdown" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88851376-89cbdc00-d1a1-11ea-96b5-9e8a055ae5d0.png" alt="attempt mobile with dropdown" width="400"/>
 
 Clicking the overlay also hides the menu and overlay.
 
@@ -82,7 +83,7 @@ Clicking the overlay also hides the menu and overlay.
 
 At around 900 pixels, the website snaps in to a desktop view. It has the menu laid out statically on the left, and then the idea creation form and displayed ideas stacked on the right.
 
-<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg" alt="comp desktop" width="400"/><img src="./assets/desktop-view.png" alt="attempt desktop" width="400"/>
+<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/desktop.jpg" alt="comp desktop" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88851407-94867100-d1a1-11ea-91ed-3130a9d23612.png" alt="attempt desktop" width="400"/>
 
 Around 1550 pixels, it also enlargens to be easily readable on larger screens.
 
@@ -92,11 +93,11 @@ Around 1550 pixels, it also enlargens to be easily readable on larger screens.
 
 On landing, the page will have no text in either entry field and the save button will be disabled.
 
-<img src="./assets/create-idea1.png" alt="attempt desktop"/>
+<img src="https://user-images.githubusercontent.com/65369751/88851311-73258500-d1a1-11ea-9d97-f38d348b55ca.png" alt="attempt desktop"/>
 
 To create an idea, the user must have some entry in both the title and body input field. Once they both have text, the button to save the idea will become active.
 
-<img src="./assets/create-idea2.png" alt="attempt desktop".>
+<img src="https://user-images.githubusercontent.com/65369751/88851320-7751a280-d1a1-11ea-8bf3-7b5c2693bf09.png" alt="attempt desktop".>
 
 Clicking the button will
 
@@ -108,7 +109,7 @@ Clicking the button will
 
 The webpage will look something like this afterwards
 
-<img src="./assets/create-idea3.png" alt="attempt desktop"/>
+<img src="./https://user-images.githubusercontent.com/65369751/88851347-80427400-d1a1-11ea-9495-6f4f88745115.png" alt="attempt desktop"/>
 
 These ideas will persist through user sessions.
 
