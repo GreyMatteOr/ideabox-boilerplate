@@ -118,20 +118,20 @@ These ideas will persist through user sessions.
 ## Favorite an Idea
 > [Back to Features](#features)
 
-To favorite an idea, click the gray star in the top left corner of an idea card. The star will then turn red, indicating that the idea has been favorited. This change will carry over even if you reload the page.
++ To favorite an idea, click the gray star in the top left corner of an idea card. The star will then turn red, indicating that the idea has been favorited. Favoriting an idea will make it easier to find (we’ll explain this feature in the [Display only Favorited Ideas](#display-only-favorited-ideas)). This change will carry over even if you reload the page.
 
+<img src="https://user-images.githubusercontent.com/14350203/88855418-0cf42e80-d1b0-11ea-9ead-9a53036fe3ec.png" alt="star-ideas" width="400"/>
 
-
-This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
++ This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
 
 ## Delete an Idea
 > [Back to Features](#features)
 
-To delete an idea, click the X in the top right corner of an idea card. This will permanently delete your idea. This change will carry over even if you reload the page.
++ To delete an idea, click the X in the top right corner of an idea card. This will permanently delete your idea. Deleting an idea even works when you’ve filtered by starred ideas or with a search query! This change will carry over even if you reload the page.
 
+<img src="https://user-images.githubusercontent.com/14350203/88855571-547aba80-d1b0-11ea-8780-08ba9a25b48c.png" alt="star-ideas" width="400"/>
 
-
-This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
++ This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
 
 ## Display only Favorited Ideas
 
