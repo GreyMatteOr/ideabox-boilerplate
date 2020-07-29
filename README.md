@@ -128,8 +128,15 @@ These ideas will persist through user sessions.
 
 ---
  ## Challenges  
+ 
+ +  As relative novices both in working in a group as well as CSS, getting the initial comp was challenging. There was a bug getting our overlay to size properly that took about 2-3 hours to discover what was causing it. To a lesser extent, there were numerous other sizing issues that weren't immediately obvious. Several times, we experimented with flexbox and grid-template-areas, but each time, they became overly-complicated, so we reverted back to grid. We did this enough times that it was a noticeable time-sink. The struggle did eventually unearth gems of knowledge, so in a way we're all glad to happened. Though, those lessons would have been equally memorable with half the effort.
+ 
 > [Back to the top](#idea-organizer)
 ---
  ## Wins
+ 
+  + 
+At first, iteration 0 and 1 took a lot of effort and eye-balling to put together. This took more time than we had anticipated We knew we were going to be working under time-constraints and a lot of material we had yet to cover was up ahead. Still, each time we got together, we blasted through a whole iteration in usually 3 hours or less. Even with all of the outside challenges, we came together and got to where we wanted to be with a decent chunk of leftover time. Even some never-before-seen git errors couldn't slow us down for very long!
+ 
 > [Back to the top](#idea-organizer)
  ---
