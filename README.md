@@ -133,9 +133,14 @@ To delete an idea, click the X in the top right corner of an idea card. This wil
 This change effect not only the displayed page, but also our data model that is being updated behind the scenes. This data model is what gets stored into `local storage`.
 
 ## Display only Favorited Ideas
+
++ Our display only favorited items section works, pretty smoothly. We created a function that allows us to store all of a users favorited items in one space. When the page re-loads the user isn’t confronted with the issue of all their favorited ideas being removed. It’s pretty easy for the user to hop back between the starred ideas and back to all of the ideas together. While inside of the starred idea section, if the user decides that they no longer want an idea inside, then they can un-favorite the idea and it will be removed the moment the button is clicked.
+<img src="" alt="" width="400"/><img src="" alt="" width="400"/>
 > [Back to Features](#features)
 
 ## Search Ideas
++ Our search ideas portion of our application allows the user to look up all of the saved ideas. To start, click the button, and it’ll remain active while the search is being performed. Only the text matching either the title or the body will pop up. All others will no longer show until the search button is turned back off, or if the character fields input matches whatever is in that specific idea card. Do be warned as of right now the search box is case-sensitive.
+<img src="" alt="" width="400"/><img src="" alt="" width="400"/>
 > [Back to Features](#features)
 
 ---
