@@ -183,7 +183,7 @@ h3 {
   color: #1F1F3D;
   font-family: 'Open Sans';
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 22px;  
 }
 
 .body-text {
@@ -249,6 +249,7 @@ h3 {
   margin:0 .9375rem;
 }
 
+
 /*=== main section ===*/
 
 .ideas {
@@ -282,7 +283,7 @@ h3 {
 }
 /*=== media queries ===*/
 
-@media screen and (min-width: 900px)  {
+@media screen and (min-width: 700px)  {
 
   body {
     display: grid;
@@ -338,30 +339,35 @@ h3 {
   .idea-form {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 27.75em 1fr;
+    grid-template-columns: 1fr minmax(22em, 27.75em) 1fr;
     grid-template-rows: 5.125em 8.4375em 3.5625em 3.5625em;
     grid-row-gap: 1em;
     padding: 1em 0;
+    justify-items: center;
   }
 
   #form-top{
     grid-column: 2;
     grid-row: 1;
+    width: 90%;
   }
 
   #form-body{
     grid-column: 2;
     grid-row: 2;
+    width: 90%;
   }
 
   #save-button{
     grid-column: 2;
     grid-row: 3;
+    width: 90%;
   }
 
   #form-bottom{
     grid-column: 2;
     grid-row: 4;
+    width: 90%;
   }
 
   .idea-cards {
@@ -370,6 +376,7 @@ h3 {
     justify-content: center;
     grid-template-columns: repeat(auto-fill, 17.9375em);
     grid-column-gap: 1.375em;
+    padding: 0;
   }
 }
 
