@@ -123,10 +123,11 @@ main{
   display: flex;
   justify-content: flex-start;
   padding: .125em;
+  align-items: center;
 }
 
 .ideas img {
-  width: 20px;
+  width: 1.7em;
   height: auto;
 }
 
@@ -201,6 +202,11 @@ h3 {
 .white-text {
   color: #ffffff;
 }
+
+.comment-text {
+  font-weight: 600;
+}
+
 /*===    borders   ===*/
 
 .border-top{
