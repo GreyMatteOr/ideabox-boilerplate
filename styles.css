@@ -68,6 +68,7 @@ main{
 .search-ideas {
   display: grid;
   width: 100%;
+  height: min-content;
   grid-template-columns: 2.5em 1fr;
   grid-template-rows: 2.5em;
 }
@@ -295,6 +296,7 @@ h3 {
     position: static;
     top: 0;
     height: 100%;
+    grid-column: 2;
   }
 
   .horse-rule{
@@ -328,7 +330,32 @@ h3 {
   }
 
   .idea-form {
-    width: 96%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 27.75em 1fr;
+    grid-template-rows: 5.125em 8.4375em 3.5625em 3.5625em;
+    grid-row-gap: 1em;
+    padding: 1em 0;
+  }
+
+  #form-top{
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #form-body{
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #save-button{
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  #form-bottom{
+    grid-column: 2;
+    grid-row: 4;
   }
 
   .idea-cards {
