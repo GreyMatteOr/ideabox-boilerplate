@@ -30,6 +30,7 @@ buttonSearch.addEventListener('click', toggleSearch);
 inputSearch.addEventListener('keyup', function updateDisplay() {
   displayIdeas();
 });
+divOverlay.addEventListener('click', toggleDropDown);
 window.onload = doOnLoad;
 
 ;function toggleSearch() {
