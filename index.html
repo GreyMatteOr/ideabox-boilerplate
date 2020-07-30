@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
@@ -27,16 +28,16 @@
     <main>
       <div class="overlay hidden"></div>
       <section class="idea-form purple-2">
-        <div>
+        <div id='form-top'>
           <p class="header-text">Title</p>
           <input class='border-top' id="title-input"type="text" name="" value="">
         </div>
-        <div>
+        <div id='form-body'>
           <p class="header-text">Body</p>
           <input class='border-top' id="body-input" type="text" name="" value="">
         </div>
         <button class="header-text purple-5 light-text border-top" id='save-button' type="button" name="button">Save</button>
-        <div class="search-ideas border-top">
+        <div class="search-ideas border-top" id='form-bottom'>
           <div class='purple-5' id="search-button" type="button" name="button"> <img src="./assets/search.svg" alt="">
           </div>
           <input class="medium-text" id="search-input" type="text" name="" value="" placeholder=" Search ideas">

@@ -16,7 +16,7 @@ class Idea  {
     node.children[0].children[0].src = this.getCorrectStar();
   }
 
-  createHtml(indexInArray){
+  createHtml(){ 
     return `
     <div class="ideas" data-id="${this.id}">
       <div class="idea-top purple-4">
@@ -29,7 +29,7 @@ class Idea  {
       </div>
       <div class="idea-bottom purple-3">
           <img src="./assets/comment.svg" alt="">
-          <p class="body-text">Comment</p>
+          <p class="body-text comment-text light-text">Comment</p>
       </div>
     </div>`
   }
