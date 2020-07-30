@@ -73,7 +73,7 @@ We decided to design our mobile view first, and build off from there. We were gi
 
 Notice it is mostly vertically organized, and to conserve space, we implemented a drop-down menu. An overlay dims everything and renders everything unusable.
 
-<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg" alt="comp mobile with dropdown" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88866891-d07cfe80-d1c0-11ea-80a4-617e8d43dc2b.png)" alt="attempt mobile with dropdown" width="400"/>
+<img src="https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg" alt="comp mobile with dropdown" width="400"/><img src="https://user-images.githubusercontent.com/65369751/88866891-d07cfe80-d1c0-11ea-80a4-617e8d43dc2b.png" alt="attempt mobile with dropdown" width="400"/>
 
 Clicking the overlay also hides the menu and overlay.
 
