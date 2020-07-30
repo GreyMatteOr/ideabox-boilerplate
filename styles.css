@@ -1,4 +1,3 @@
-/*=== Reset ===*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 html, body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -143,7 +142,6 @@ h3 {
   background-color: grey;
   opacity: 66%;
 }
-/*=== Background Colors ===*/
 
 .purple-1 {
   background: #EAEAF4;
@@ -177,13 +175,12 @@ h3 {
 .white-background {
   background: #ffffff;
 }
-/*=== Fonts ===*/
 
 .header-text {
   color: #1F1F3D;
   font-family: 'Open Sans';
   font-weight: bold;
-  font-size: 22px;  
+  font-size: 22px;
 }
 
 .body-text {
@@ -207,16 +204,11 @@ h3 {
   font-weight: 600;
 }
 
-/*===    borders   ===*/
-
 .border-top{
   border: 2px solid;
   border-color: #5356A5;
-  /* border-color: #4b4e95; */
-  /* border-color: #353567; */
   border-radius: 2px;
 }
-/*=== menu section ===*/
 
 .menu {
   height: 65px;
@@ -249,21 +241,10 @@ h3 {
   margin:0 .9375rem;
 }
 
-
-/*=== main section ===*/
-
 .ideas {
   display: flex;
   flex: 1;
   flex-direction: column;
-}
-
-.idea-form {
-  flex-grow: 2;
-}
-
-.idea-cards {
-  flex-grow: 3;
 }
 
 .hidden{
@@ -281,7 +262,6 @@ h3 {
 .active-starring{
   background-color: #a63212;
 }
-/*=== media queries ===*/
 
 @media screen and (min-width: 700px)  {
 

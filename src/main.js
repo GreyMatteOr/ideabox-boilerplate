@@ -1,4 +1,4 @@
-var ideaArray;
+var ideaArray = [];
 var showStarred = false;
 var showSearched = false;
 
@@ -40,17 +40,15 @@ window.onload = doOnLoad;
 }
 
 ;function doOnLoad() {
-  ideaArray = localStorage.getItem('ideaArray')
-  ideaArray = JSON.parse(ideaArray);
-  if(ideaArray) {
-    for (var i = 0; i < ideaArray.length; i++) {
-      ideaArray[i] = new Idea(ideaArray[i].title, ideaArray[i].body, ideaArray[i].star, ideaArray[i].id)
+  var storedData = localStorage.getItem('ideaArray')
+  storedData = JSON.parse(storedData);
+  if(storedData) {
+    for (var i = 0; i < storedData.length; i++) {
+      ideaArray[i] = new Idea(storedData[i].title, storedData[i].body, storedData[i].star, storedData[i].id)
     }
-  } else {
-    ideaArray = [];
   }
   checkButtonStatus();
-  displayIdeas(true);
+  displayIdeas();
 }
 
 ;function displayIdeas() {
@@ -64,19 +62,26 @@ window.onload = doOnLoad;
       }
     }
   } if(showSearched) {
-    for (var i = 0; i < toDisplay.length; i++) {
-      if(!(toDisplay[i].title.includes(inputSearch.value) || toDisplay[i].body.includes(inputSearch.value))) {
-        toDisplay.splice(i, 1);
-        i--;
-      }
-    }
-
+    removeNotStarred(toDisplay);
   }
+  generateDisplay(toDisplay);
+};
+
+;function removeNotStarred(toDisplay){
+  for (var i = 0; i < toDisplay.length; i++) {
+    if(!(toDisplay[i].title.includes(inputSearch.value) || toDisplay[i].body.includes(inputSearch.value))) {
+      toDisplay.splice(i, 1);
+      i--;
+    }
+  }
+};
+
+;function generateDisplay(toDisplay){
   ideaCards.innerHTML = '';
   for (var i = 0; i < toDisplay.length; i++) {
-      ideaCards.innerHTML += toDisplay[i].createHtml();
+    ideaCards.innerHTML += toDisplay[i].createHtml();
   }
-}
+};
 
 ;function getUserIdea() {
   var newTitle = inputTitle.value;
@@ -91,7 +96,7 @@ window.onload = doOnLoad;
 
 ;function createIdea(newTitle, newBody) {
   var idea = new Idea(newTitle, newBody);
-  ideaCards.innerHTML += idea.createHtml(ideaArray.length);
+  ideaCards.innerHTML += idea.createHtml();
   ideaArray.push(idea);
   localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
 }
@@ -122,7 +127,7 @@ window.onload = doOnLoad;
 ;function deleteIdea(event) {
   var ideaNode = event.target.closest('.ideas');
   ideaArray.splice(findIndex(ideaNode), 1);
-  ideaNode.parentNode.removeChild(ideaNode);
+  ideaNode.remove();
   localStorage.setItem('ideaArray', JSON.stringify(ideaArray));
 }
 
@@ -145,5 +150,3 @@ window.onload = doOnLoad;
     displayIdeas()
   }
 };
-
-var idea = new Idea ("example", "bret")

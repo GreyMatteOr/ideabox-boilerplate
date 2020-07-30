@@ -16,7 +16,7 @@ class Idea  {
     node.children[0].children[0].src = this.getCorrectStar();
   }
 
-  createHtml(indexInArray){
+  createHtml(){ 
     return `
     <div class="ideas" data-id="${this.id}">
       <div class="idea-top purple-4">
